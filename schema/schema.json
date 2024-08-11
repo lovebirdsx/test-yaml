@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "EEntityType": {
+            "description": "实体类型，其中：\n- machine 代表机关\n- collection 代表采集物\n- treasure 代表宝箱\n- animal 代表动物*",
+            "enum": [
+                "machine",
+                "collection",
+                "treasure",
+                "animal"
+            ],
+            "type": "string"
+        }
+    },
+    "description": "实体的结构定义",
+    "examples": [
+        {
+            "id": 1,
+            "name": "example",
+            "type": "machine"
+        }
+    ],
+    "properties": {
+        "id": {
+            "description": "id，全局唯一",
+            "type": "number"
+        },
+        "name": {
+            "description": "名称",
+            "type": "string"
+        },
+        "type": {
+            "$ref": "#/definitions/EEntityType",
+            "default": "EEntityType.Entity",
+            "description": "类型"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "type"
+    ],
+    "type": "object"
+}
+

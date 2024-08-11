@@ -1,0 +1,15 @@
+{
+  "name": "test-yaml",
+  "version": "1.0.0",
+  "description": "Test Yaml Technology for Personal Use",
+  "main": "index.js",
+  "repository": "git@github.com:lovebirdsx/test-yaml.git",
+  "author": "lovebird <lovebirdsx@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "typescript-json-schema ./ts/type.ts IEntity --tsNodeRegister --required -o ./schema/schema.json"
+  },
+  "devDependencies": {
+    "typescript-json-schema": "^0.64.0"
+  }
+}
